@@ -277,7 +277,7 @@ function createData(name, calories, fat, carbs, protein) {
   
     return (
       <div className="enhancedTable">
-        <div className={classes.root}>
+        <div className={classes.root + " rootContainer"}>
           <Paper className={classes.paper}>
             <EnhancedTableToolbar numSelected={selected.length} />
             <TableContainer>
@@ -350,6 +350,7 @@ function createData(name, calories, fat, carbs, protein) {
           <FormControlLabel
             control={<Switch checked={dense} onChange={handleChangeDense} />}
             label="Dense padding"
+            className="formControlLabel"
           />
         </div>
       </div>
